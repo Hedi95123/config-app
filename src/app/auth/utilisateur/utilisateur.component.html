@@ -1,0 +1,6 @@
+<div *ngIf ="firebaseService.email | async as email " >
+  <h2 class="header">{{email}}</h2></div>
+  
+   <div *ngIf ="firebaseService.isAdmin | async " >
+                <p>Administrateur</p>
+              </div>

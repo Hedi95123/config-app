@@ -1,0 +1,41 @@
+<a routerLink="/articles">Retour</a>
+<br />
+<h2 class="page-header">Ajout Article</h2>
+
+<form (ngSubmit)="onAddSubmit()" novalidate>
+  <div class="form-group">
+    <label>Categorie</label>
+    <input class="form-control" type="text" [(ngModel)]="article.title" name="title" required>
+  </div>
+  <div class="form-group">
+    <label>Titre</label>
+    <input class="form-control" type="text" [(ngModel)]="article.city" name="city" required>
+  </div>
+  <div class="form-group">
+    <label>Owner</label>
+    <input class="form-control" type="text" [(ngModel)]="article.owner" name="owner" required>
+  </div>
+  <div class="form-group">
+    <label>Bedrooms</label>
+    <input class="form-control" type="number" [(ngModel)]="article.bedrooms" name="bedrooms" required>
+  </div>
+  
+  <div class="form-group">
+    <label>Type</label>
+    <select class="form-control" type="text" [(ngModel)]="article.type" name="type" required>
+      <option value="Estate">Estate</option>
+      <option value="Condo">Condo</option>
+      <option value="Apartment">Apartment</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <input id="image" name="image" (change)="detectFiles($event)" [(ngModel)]="article.image" type="file" >
+  </div>
+
+  
+  <div class="form-group">
+    <label>Price</label>
+    <input class="form-control" type="text" [(ngModel)]="article.price" name="price" required>
+  </div>
+  <input type="submit" value="envoyer" class="btn btn-success">
+</form>

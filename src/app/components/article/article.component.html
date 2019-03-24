@@ -1,0 +1,27 @@
+<div *ngIf="article">
+  <a [routerLink]="['/articles']">Go Back</a>
+  <br>
+  <br>
+  <h2 class="page-header">{{article.title}}
+    <small>{{article.city}}</small>
+  </h2>
+  <hr>
+  <div class="row">
+    <div class="col-md-4">
+      <img style="width: 100%" class="img-thumbnail" src="{{imageUrl}}">
+      <a  class="btn btn-danger" href="{{imageUrl}}"   target="_blank" >Fiche Produit </a>
+      
+    </div>
+    <div class="col-md-8">
+      <ul class="list-group">
+        <li class="list-group-item">Owner: {{article.owner}}</li>
+        <li class="list-group-item">Bedrooms: {{article.bedrooms}}</li>
+        <li class="list-group-item">Type: {{article.type}}</li>
+        <li class="list-group-item">Price: {{article.price}}</li>
+      </ul>
+      <br>
+      <a class="btn btn-default" [routerLink]="['/edit-article/'+ article.key]">Edit</a>
+      <a class="btn btn-danger" (click)="deleteArticle()">Delete</a>
+    </div>
+  </div>
+</div>

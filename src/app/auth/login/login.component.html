@@ -1,0 +1,14 @@
+<h2 class="page-header">Login</h2>
+
+<form (ngSubmit) = "myLogin()" novalidate>
+  <div class="form-group">
+    <label>email</label>
+    <input class="form-control" type="text" [(ngModel)]="auth.email" name="email" required>
+  </div>
+  <div class="form-group">
+    <label>password</label>
+    <input class="form-control" type="text" [(ngModel)]="auth.password" name="password" required>
+  </div>
+  
+  <input type="submit" value="submit" class="btn btn-success">
+</form>
